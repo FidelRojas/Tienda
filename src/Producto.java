@@ -1,5 +1,5 @@
 
-public class Producto {
+public abstract class Producto {
 	int precio=0;
 	String nombre="";
 
@@ -13,18 +13,7 @@ public class Producto {
 		return precio;
 	}
 
-	public boolean estaDisponible() {
-		// TODO Auto-generated method stub
-		return true;
-	}
-
-	public boolean estaDisponible(int cant) {
-		// TODO Auto-generated method stub
-		return false;
-	}
-	public int calcularTarifa(int cantidad) {
-		return precio*cantidad;
-		
-	}
+	public abstract boolean estaDisponible(int cant);
+	public abstract int calcularTarifa(int cantidad);
 
 }

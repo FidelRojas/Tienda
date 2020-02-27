@@ -6,6 +6,9 @@ int saldo;
 		this.nombre=_nombre;
 		// TODO Auto-generated constructor stub
 	}
+	public Articulo() {
+		// TODO Auto-generated constructor stub
+	}
 	public void setSaldo(int saldo) {
 		this.saldo=saldo;
 	}
@@ -22,5 +25,6 @@ int saldo;
 	public int calcularTarifa(int cantidad) {
 		return cantidad*precio;
 	}
+	
 
 }

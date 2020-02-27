@@ -1,5 +1,3 @@
-import static org.junit.jupiter.api.Assertions.*;
-
 import org.junit.Assert;
 import org.junit.jupiter.api.Test;
 
@@ -7,13 +5,13 @@ class TestTienda {
 
 	@Test
 	void unNuevoProductoDebeDeTenerUnNombreVacio() {
-		Producto producto= new Producto();
+		Producto producto= new Articulo();
 		Assert.assertEquals("", producto.getNombre());
 	}
 	
 	@Test
 	void unNuevoProductoDebeDeTenerUnPrecioInicialDeCero() {
-		Producto producto= new Producto();
+		Producto producto= new Articulo();
 		Assert.assertEquals(0, producto.getPrecio());
 	}
 	@Test
@@ -40,13 +38,13 @@ class TestTienda {
 	void unNuevoServicioTieneQueDevolverTrueSiEsQueEstaDisponible() {
 		Servicio producto= new Servicio("Chofer",50);
 		producto.setEstado(true);
-		Assert.assertEquals(true, producto.estaDisponible());
+		Assert.assertEquals(true, producto.estaDisponible(1));
 	}
 	@Test
 	void unNuevoServicioTieneQueDevolverFalseSiEsQueNoEstaDisponible() {
 		Servicio producto= new Servicio("Chofer",50);
 		producto.setEstado(false);
-		Assert.assertEquals(false, producto.estaDisponible());
+		Assert.assertEquals(false, producto.estaDisponible(1));
 	}
 	@Test
 	void unNuevoArticuloTieneQueDevolverFalseSiEsQueNoEstaDisponible() {

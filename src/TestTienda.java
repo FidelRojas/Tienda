@@ -16,10 +16,10 @@ class TestTienda {
 		Producto producto= new Producto();
 		Assert.assertEquals(0, producto.GetPrecio());
 	}
-//	@Test
-//	void unNuevoArtiuloTieneQueTenerElNombreDelConstructor() {
-//		Producto producto= new Articulo("Candado");
-//		Assert.assertEquals("", producto.GetNombre());
-//	}
+	@Test
+	void unNuevoArtiuloTieneQueTenerElNombreDelConstructor() {
+		Producto producto= new Articulo("Candado",10);
+		Assert.assertEquals("Candado", producto.GetNombre());
+	}
 
 }

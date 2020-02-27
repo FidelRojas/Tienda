@@ -18,5 +18,9 @@ int saldo;
 		
 		
 	}
+	@Override
+	public int calcularTarifa(int cantidad) {
+		return cantidad*precio;
+	}
 
 }

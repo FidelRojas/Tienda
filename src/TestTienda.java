@@ -60,5 +60,19 @@ class TestTienda {
 		producto.setSaldo(10);
 		Assert.assertEquals(true, producto.estaDisponible(5));
 	}
-
+	@Test
+	void calcularTarifaDeUnArticuloDebeDeDevolcerLaCantidadPorPrecio() {
+		Articulo producto= new Articulo("Candado",10);
+		Assert.assertEquals(50, producto.calcularTarifa(5));
+	}
+	@Test
+	void calcularTarifaDeUnProductoDebeDeDevolcerElPrecioPorLaCantidad() {
+		Servicio producto= new Servicio("Candado",10);
+		Assert.assertEquals(20, producto.calcularTarifa(2));
+	}
+	@Test
+	void calcularTarifaDeUnProductoMayorA3DebeDeDevolcerElPrecioPorLaCantidadMenosEl10Porciento() {
+		Servicio producto= new Servicio("Candado",10);
+		Assert.assertEquals(90, producto.calcularTarifa(10));
+	}
 }

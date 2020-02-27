@@ -22,5 +22,9 @@ public class Producto {
 		// TODO Auto-generated method stub
 		return false;
 	}
+	public int calcularTarifa(int cantidad) {
+		return precio*cantidad;
+		
+	}
 
 }

@@ -1,6 +1,6 @@
 
 public class Producto {
-	int cantidad;
+	int precio=0;
 	String nombre="";
 
 	public String GetNombre() {
@@ -10,7 +10,7 @@ public class Producto {
 
 	public int GetPrecio() {
 		// TODO Auto-generated method stub
-		return 0;
+		return precio;
 	}
 
 }

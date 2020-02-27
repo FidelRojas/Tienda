@@ -26,5 +26,15 @@ class TestTienda {
 		Producto producto= new Articulo("Candado",10);
 		Assert.assertEquals(10, producto.GetPrecio());
 	}
+	@Test
+	void unNuevoServicioTieneQueTenerElNombreDelConstructor() {
+		Producto producto= new Servicio("Chofer",50);
+		Assert.assertEquals("Chofer", producto.GetNombre());
+	}
+	@Test
+	void unNuevoServicioTieneQueTenerElPrecioDelConstructor() {
+		Producto producto= new Servicio("Chofer",50);
+		Assert.assertEquals(50, producto.GetPrecio());
+	}
 
 }

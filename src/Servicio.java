@@ -1,10 +1,17 @@
 
 public class Servicio extends Producto {
 
+	boolean disponible=false;
 	public Servicio(String _nombre, int _precio) {
 		this.precio=_precio;
 		this.nombre=_nombre;
-		// TODO Auto-generated constructor stub
+	}
+	public void setEstado(boolean estado) {
+		disponible=estado;
+	}
+	@Override
+	public boolean estaDisponible() {
+		return disponible;
 	}
 
 }

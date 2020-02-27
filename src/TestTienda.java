@@ -38,8 +38,16 @@ class TestTienda {
 	}
 	@Test
 	void unNuevoServicioTieneQueDevolverTrueSiEsQueEstaDisponible() {
-		Producto producto= new Servicio("Chofer",50);
+		Servicio producto= new Servicio("Chofer",50);
+		producto.setEstado(true);
 		Assert.assertEquals(true, producto.estaDisponible());
+	}
+	@Test
+	void unNuevoServicioTieneQueDevolverFalseSiEsQueNoEstaDisponible() {
+		Servicio producto= new Servicio("Chofer",50);
+		producto.setEstado(false);
+		
+		Assert.assertEquals(false, producto.estaDisponible());
 	}
 
 }

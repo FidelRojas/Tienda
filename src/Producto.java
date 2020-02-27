@@ -6,4 +6,9 @@ public class Producto {
 		return "";
 	}
 
+	public int GetPrecio() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
 }

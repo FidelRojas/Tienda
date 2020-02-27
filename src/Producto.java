@@ -18,4 +18,9 @@ public class Producto {
 		return true;
 	}
 
+	public boolean estaDisponible(int cant) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
 }
